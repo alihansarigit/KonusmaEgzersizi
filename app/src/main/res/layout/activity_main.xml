@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Activitys.MainActivity">
+
+    <include layout="@layout/mytoolbar"/>
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_margin="20dp"
+                      android:gravity="center"
+                      android:padding="10dp"
+                      android:background="@drawable/circle_menu"
+                      android:layout_height="wrap_content">
+
+            <ImageView android:layout_width="25dp"
+                       android:src="@drawable/gold_medal"
+                       android:layout_height="25dp"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:text="100"
+                      android:layout_marginLeft="5dp"
+                      android:id="@+id/txt_score"
+                      android:textStyle="bold"
+                      android:textColor="@android:color/white"
+                      android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle_menu"
+                    android:id="@+id/lnrMaraton"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                <ImageView android:layout_width="50dp"
+                           android:layout_height="50dp"
+                           android:src="@drawable/btn_muscle"/>
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textSize="22dp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:text="MARATON"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/lnrvs"
+                    android:background="@drawable/circle_menu"
+
+                    android:orientation="horizontal">
+
+                <ImageView android:layout_width="50dp"
+                           android:layout_height="50dp"
+                           android:src="@drawable/support"/>
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textSize="22dp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:gravity="center"
+
+                        android:textColor="@android:color/white"
+                        android:text="1 VS 1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle_menu"
+                    android:id="@+id/lnristatistik"
+                    android:orientation="horizontal">
+
+                <ImageView android:layout_width="50dp"
+                           android:layout_height="50dp"
+                           android:src="@drawable/statistic"/>
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textSize="22dp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@android:color/white"
+                        android:text="İSTATİSTİK"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/fab_help"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_help_outline_black_24dp"
+                android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+</LinearLayout>

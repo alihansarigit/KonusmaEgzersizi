@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:orientation="vertical"
+                                    app:cardCornerRadius="5dp"
+                                    android:id="@+id/custom_details_card"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/correct"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+    <TextView android:layout_width="wrap_content"
+              android:text="KARIŞMAK"
+              android:textSize="23dp"
+              android:id="@+id/custom_details_txtWords"
+              android:padding="10dp"
+              android:textStyle="bold"
+              android:textColor="@android:color/white"
+              android:layout_gravity="center"
+              android:layout_height="wrap_content"/>
+
+</FrameLayout>

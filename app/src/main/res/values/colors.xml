@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#45B96C</color>
+    <color name="team_b">#FF363A</color>
+    <color name="team_a">#488BFF</color>
+    <color name="date_color">#998484</color>
+    <color name="toolbarColor">#45B96C</color>
+    <color name="pass">#DF564E</color>
+    <color name="correct">#6BDE70</color>
+    <color name="card_statistic_color">#F4F3F3</color>
+
+
+
+
+
+
+
+
+
+    <color name="default_selected_dot_color">#ffffff</color>
+    <color name="default_dot_color">#e8e8e8</color>
+</resources>
