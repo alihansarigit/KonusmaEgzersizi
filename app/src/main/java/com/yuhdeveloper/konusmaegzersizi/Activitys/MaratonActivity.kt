@@ -1,13 +1,13 @@
 package com.yuhdeveloper.konusmaegzersizi.Activitys
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Handler
 import android.provider.Settings
-import android.support.v7.widget.Toolbar
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.google.android.gms.ads.*
 import com.yuhdeveloper.konusmaegzersizi.Database.SqliteAdapter
 import com.yuhdeveloper.konusmaegzersizi.Point
@@ -16,7 +16,6 @@ import com.yuhdeveloper.konusmaegzersizi.User
 import kotlinx.android.synthetic.main.activity_maraton.*
 import java.text.SimpleDateFormat
 import java.util.*
-import android.support.v4.os.HandlerCompat.postDelayed
 
 
 
@@ -55,7 +54,7 @@ class MaratonActivity : AppCompatActivity() {
             override fun onAdFailedToLoad(p0: Int) {
                 super.onAdFailedToLoad(p0)
                 adView?.loadAd(AdRequest)
-                Toast.makeText(this@MaratonActivity," "+p0,Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this@MaratonActivity," "+p0,Toast.LENGTH_SHORT).show()
             }
         }
     }

@@ -2,14 +2,12 @@ package com.yuhdeveloper.konusmaegzersizi.viewPagerSample
 
 import android.app.Dialog
 import android.os.Bundle
-import android.support.v4.app.DialogFragment
-import android.support.v4.app.Fragment
-import android.support.v4.view.ViewPager
-import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.DialogFragment
+import androidx.viewpager.widget.ViewPager
 import com.yuhdeveloper.konusmaegzersizi.R
 import kotlinx.android.synthetic.main.fragment_view_pager_sample.*
 

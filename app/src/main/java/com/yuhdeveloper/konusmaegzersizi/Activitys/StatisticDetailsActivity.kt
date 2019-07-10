@@ -1,11 +1,12 @@
 package com.yuhdeveloper.konusmaegzersizi.Activitys
 
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.TabLayout
-import android.support.v4.app.Fragment
-import android.support.v7.widget.Toolbar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.Fragment
+import androidx.viewpager.widget.ViewPager
+import com.google.android.material.tabs.TabLayout
 import com.yuhdeveloper.konusmaegzersizi.Adapterss.ViewPager_Words
 import com.yuhdeveloper.konusmaegzersizi.Database.SqliteAdapter
 import com.yuhdeveloper.konusmaegzersizi.R
@@ -20,7 +21,8 @@ class StatisticDetailsActivity : AppCompatActivity() {
     lateinit var lstFragment: ArrayList<Fragment>
     lateinit var lstTitles: ArrayList<String>
     lateinit var toolbar: Toolbar
-
+    lateinit var details_ViewPager:ViewPager
+    lateinit var details_TabLayout:TabLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +33,9 @@ class StatisticDetailsActivity : AppCompatActivity() {
             onBackPressed()
         }
 
+        details_ViewPager = findViewById(R.id.details_viewPager)
+        details_TabLayout = findViewById(R.id.details_tabLayout)
+        lstFragment= ArrayList<Fragment>()
         match_id = intent.getIntExtra("id", 0)
 
         var sql = SqliteAdapter(this)
@@ -45,7 +50,7 @@ class StatisticDetailsActivity : AppCompatActivity() {
         pass_fragment.list = lstWords.pass
         pass_fragment.isCorrect = false
 
-        lstFragment = ArrayList<Fragment>()
+//        lstFragment = ArrayList<WordsFragment>()
         lstTitles = ArrayList<String>()
         lstFragment.add(correct_fragment)
         lstFragment.add(pass_fragment)
@@ -53,16 +58,18 @@ class StatisticDetailsActivity : AppCompatActivity() {
         lstTitles.add("BAŞARISIZ")
 
         val fragmentAdapter = ViewPager_Words(supportFragmentManager, lstFragment, lstTitles)
-        details_viewPager.adapter = fragmentAdapter
-        details_tabLayout.setupWithViewPager(details_viewPager)
 
-        details_tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
-        details_tabLayout.setTabTextColors(Color.parseColor(getString(R.string.tablayout_normal)), Color.parseColor(getString(
+
+        details_ViewPager.adapter = fragmentAdapter
+        details_TabLayout.setupWithViewPager(details_ViewPager)
+
+        details_TabLayout.setSelectedTabIndicatorColor(Color.WHITE);
+        details_TabLayout.setTabTextColors(Color.parseColor(getString(R.string.tablayout_normal)), Color.parseColor(getString(
                     R.string.tablayout_selected)));
 
 
 
-        details_tabLayout.addOnTabSelectedListener(object :
+        details_TabLayout.addOnTabSelectedListener(object :
             TabLayout.OnTabSelectedListener {
 
             override fun onTabSelected(tab: TabLayout.Tab) {

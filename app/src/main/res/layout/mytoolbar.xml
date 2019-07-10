@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.v7.widget.Toolbar
-            app:navigationIcon="@drawable/ic_keyboard_arrow_left_black_24dp"
-            android:layout_width="match_parent"
-            app:title="MARATON"
-            android:id="@+id/toolbar"
-            app:titleTextColor="@android:color/white"
-            android:background="@color/toolbarColor"
-            android:layout_height="wrap_content">
-    </android.support.v7.widget.Toolbar>
+<androidx.appcompat.widget.Toolbar
 
-</FrameLayout>
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        app:navigationIcon="@drawable/ic_keyboard_arrow_left_black_24dp"
+        android:layout_width="match_parent"
+        app:title="MARATON"
+        android:id="@+id/toolbar"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/toolbarColor"
+        android:layout_height="wrap_content">
+</androidx.appcompat.widget.Toolbar>
+

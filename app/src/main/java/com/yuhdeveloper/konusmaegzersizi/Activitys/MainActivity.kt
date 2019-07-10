@@ -7,13 +7,14 @@ import android.content.IntentFilter
 import android.net.ConnectivityManager
 import android.net.ConnectivityManager.CONNECTIVITY_ACTION
 import android.os.Build
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
-import android.support.v7.widget.Toolbar
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat.startActivity
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
@@ -124,53 +125,6 @@ class MainActivity : AppCompatActivity(), RewardedVideoAdListener, ConnectivityR
     override fun onRewardedVideoCompleted() {
         Toast.makeText(this, "onRewardedVideoCompleted", Toast.LENGTH_SHORT).show()
     }
-
-//
-//    override fun onRewardedVideoAdClosed() {
-//        SqliteAdapter(this).addPointRewared(Point.startReward())
-//    }
-//
-//    override fun onRewardedVideoAdLeftApplication() {
-//    }
-//
-//    override fun onRewarded(reward: RewardItem) {
-//        SqliteAdapter(this).addPointRewared(reward.amount * 5)
-//        Toast.makeText(
-//            this, "onRewarded! currency: ${reward.type} amount: ${reward.amount}",
-//            Toast.LENGTH_SHORT
-//        ).show()
-//    }
-//
-//
-//    override fun onRewardedVideoAdFailedToLoad(errorCode: Int) {
-//        loadAd()
-////        SqliteAdapter(this).addPointRewared(Point.startReward())
-////        Toast.makeText(this, "onRewardedVideoAdFailedToLoad" + errorCode, Toast.LENGTH_SHORT).show()
-//    }
-//
-//    override fun onRewardedVideoAdLoaded() {
-//        toolbar.menu.getItem(0).setVisible(true)
-////        Toast.makeText(this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show()
-//    }
-//
-//    override fun onRewardedVideoAdOpened() {
-//
-////        Toast.makeText(this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show()
-//    }
-//
-//    override fun onRewardedVideoStarted() {
-////        SqliteAdapter(this).addPointRewared(Point.startReward())
-//
-////        Toast.makeText(this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show()
-//    }
-//
-//    override fun onRewardedVideoCompleted() {
-////        SqliteAdapter(this).addPointRewared(Point.startReward())
-//
-////        Toast.makeText(this, "onRewardedVideoCompleted", Toast.LENGTH_SHORT).show()
-//
-//    }
-
 
     lateinit var toolbar: Toolbar
     lateinit var my_score: TextView
